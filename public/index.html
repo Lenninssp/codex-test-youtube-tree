@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Learning Trees</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="panel">
+        <h1>📼 YouTube Learning Trees</h1>
+        <p class="subtitle">Rocchio-powered recommendations from your own feedback.</p>
+        <form id="new-tree-form">
+          <input id="tree-name" placeholder="New tree name" maxlength="60" />
+          <button type="submit">Create tree</button>
+        </form>
+        <div id="tree-list"></div>
+      </aside>
+
+      <main class="content">
+        <div id="empty-state">Pick a tree to begin 🌿</div>
+        <div id="tree-view" class="hidden"></div>
+      </main>
+    </div>
+
+    <template id="point-template">
+      <div class="point-row">
+        <input class="point-text" placeholder="Feedback point..." maxlength="120" required />
+        <label><input type="checkbox" class="point-liked" checked /> positive</label>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>
